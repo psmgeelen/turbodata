@@ -1,0 +1,11 @@
+name: TotalData-08.11.2021 # please use versioned environemnt naming convention, iso format can also be used: 20211108TotalData
+channels:
+  - conda-forge # Check the difference between repos (anaconda is the default repo, but there are more)
+dependencies:
+  - python=3.9.4 #Define what version of python you would like
+  - pandas # Libraries can be named without a version specified
+  - sqlalchemy
+  - pyodbc
+  - pip # If you want to use pip, you first need to install it, before you can install libraries with pip. 
+  - pip:
+    - scipy

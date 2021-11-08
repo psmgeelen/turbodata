@@ -1,0 +1,16 @@
+So setup the example we want to setup 2 database. For orchestration we use https://www.sqlservertutorial.net/sql-server-sample-database/ example. 
+
+Note how I use different ports for localhost, so I can reach both instances:
+docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=yourStrong(!)Password' -p 1433:1433 -d --name source_db mcr.microsoft.com/mssql/server:2017-CU8-ubuntu
+docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=yourStrong(!)Password' -p 1432:1433 -d --name target_db mcr.microsoft.com/mssql/server:2017-CU8-ubuntu
+
+
+The standard username is 'sa'
+After that we load the source_db with some data by executing the sql scripts provided at the bottom of the example page. We need to first make a new database called 'BikeStores' before we can load in the object and the data. 
+
+In order to connect to the databases over Python there are 2 real options. PyODBC is the most agnostic approach and therefore the most recommended. It build on the available connectors that are present on the OS. How to install MS SQL ODBC connector is outlined here: https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server?view=sql-server-ver15#debian17. Version 17 wsas used in this example.
+
+
+#### UPDATE #####
+
+Requires multiarch support for installation: https://mun-steiner.de/wordpress/index.php/linux/scannen-und-drucken/canon-software-pixma-mg5250/multiarch-support-erforderlich/
