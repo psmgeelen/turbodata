@@ -9,4 +9,4 @@ dependencies:
   - ipython # If you use the environment with Jupyter notebooks
   - pip # If you want to use pip, you first need to install it, before you can install libraries with pip. 
   - pip:
-    - scipy
+    - azure-storage-file-datalake
