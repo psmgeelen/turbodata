@@ -1,8 +1,8 @@
 So setup the example we want to setup 2 database. For orchestration we use https://www.sqlservertutorial.net/sql-server-sample-database/ example. 
 
 Note how I use different ports for localhost, so I can reach both instances:
-docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=yourStrong(!)Password' -p 1433:1433 -d --name source_db mcr.microsoft.com/mssql/server:2017-CU8-ubuntu
-docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=yourStrong(!)Password' -p 1432:1433 -d --name target_db mcr.microsoft.com/mssql/server:2017-CU8-ubuntu
+docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=yourStrong(!)Password' -p 1433:1433 -d --name source_db mcr.microsoft.com/mssql/server:2019-latest
+docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=yourStrong(!)Password' -p 1432:1433 -d --name target_db mcr.microsoft.com/mssql/server:2019-latest
 
 
 The standard username is 'sa'
