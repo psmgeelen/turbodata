@@ -7,6 +7,7 @@ dependencies:
   - sqlalchemy
   - pyodbc
   - ipython # If you use the environment with Jupyter notebooks
-  - pip # If you want to use pip, you first need to install it, before you can install libraries with pip. 
+  - pip # If you want to use pip, you first need to install it, before you can install libraries with pip.
+  - json 
   - pip:
     - azure-storage-file-datalake
