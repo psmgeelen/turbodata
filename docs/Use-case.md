@@ -1,3 +1,5 @@
+
+![Awesome Title](noun_turbo_748695_small.png)
 # Use Case: Turbodata
 define purpose of current solution
 
